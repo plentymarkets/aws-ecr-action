@@ -2,7 +2,7 @@ FROM docker:24.0.6
 
 RUN apk update \
   && apk upgrade \
-  && apk add --no-cache --update python py-pip coreutils bash \
+  && apk add --no-cache --update py-pip coreutils bash \
   && rm -rf /var/cache/apk/* \
   && pip install pyyaml==5.3.1 \
   && pip install -U awscli \
